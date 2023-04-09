@@ -1,6 +1,5 @@
 import nodeLogo from './assets/node.svg'
 import { useState } from 'react'
-import Update from '@/components/update'
 import './App.scss'
 
 function App() {
@@ -40,8 +39,6 @@ function App() {
         Place static files into the<code>/public</code> folder{' '}
         <img style={{ width: '5em' }} src={nodeLogo} alt="Node logo" />
       </div>
-
-      <Update />
     </div>
   )
 }
