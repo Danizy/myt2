@@ -1,15 +1,18 @@
-import nodeLogo from './assets/node.svg'
-import { useState } from 'react'
-import './App.scss'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import nodeLogo from "./assets/node.svg";
+import "./App.scss";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="App">
       <div className="logo-box">
         <a
           href="https://github.com/electron-vite/electron-vite-react"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src="./vite.svg"
@@ -36,11 +39,15 @@ function App() {
         Click on the Electron + Vite logo to learn more
       </p>
       <div className="flex-center">
-        Place static files into the<code>/public</code> folder{' '}
-        <img style={{ width: '5em' }} src={nodeLogo} alt="Node logo" />
+        Place static files into the<code>/public</code> folder{" "}
+        <img
+          style={{ width: "5em" }}
+          src={nodeLogo}
+          alt="Node logo"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

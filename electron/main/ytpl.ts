@@ -1,3 +1,3 @@
-const ytpl = require('ytpl')
+const ytpl = require("ytpl");
 
-export { ytpl }
+export { ytpl };
