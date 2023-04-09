@@ -1,6 +1,8 @@
-import { app, BrowserWindow, shell, ipcMain } from "electron";
 import { release } from "node:os";
 import { join } from "node:path";
+
+import { app, BrowserWindow, shell, ipcMain } from "electron";
+
 import { update } from "./update";
 import { ytpl } from "./ytpl";
 
@@ -70,6 +72,7 @@ async function createWindow() {
   // Make all links open with the browser, not with the application
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith("https:")) shell.openExternal(url);
+
     return { action: "deny" };
   });
 
@@ -94,6 +97,7 @@ app.on("second-instance", () => {
 
 app.on("activate", () => {
   const allWindows = BrowserWindow.getAllWindows();
+
   if (allWindows.length) {
     allWindows[0].focus();
   } else {

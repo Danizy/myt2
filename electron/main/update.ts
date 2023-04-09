@@ -21,6 +21,7 @@ export function update(win: Electron.BrowserWindow) {
       newVersion: arg?.version
     });
   });
+
   // update not available
   autoUpdater.on("update-not-available", (arg) => {
     win.webContents.send("update-can-available", {
@@ -36,6 +37,7 @@ export function update(win: Electron.BrowserWindow) {
       const error = new Error(
         "The update feature is only available after the package."
       );
+
       return { message: error.message, error };
     }
 
